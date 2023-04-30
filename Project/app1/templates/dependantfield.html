@@ -1,0 +1,24 @@
+{% load static %}
+<form>
+  <label>Country:</label>
+  <select id="country" name="country" style="width:50%">
+    <option value="0">Select a country</option>
+    {% for i in country %}
+          <option value="{{i.id}}">{{i.name}}</option>
+    {% endfor %}
+  </select>
+  <br><br>
+  <label>State:</label>
+  <select id="state" name="state"></select>
+  <br><br>
+  <label>City:</label>
+  <select id="city" name="city"></select>
+  <br><br>
+  <label>Business:</label>
+  <select id="business" name="business"></select>
+  <br><br>
+  <label>Packages:</label>
+  <select id="packages" name="packages"></select>
+</form>
+<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+<script src="{% static 'js/dependant.js' %}"></script> 
